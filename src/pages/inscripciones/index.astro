@@ -1,0 +1,27 @@
+---
+import Layout from '~/layouts/Layout.astro';
+import { getHomePermalink } from '~/utils/permalinks';
+
+const title = `Inscripciones del curso de Inteligencia Artificial en Estanzuela Zacapa`;
+---
+
+<Layout metadata={{ title }}>
+  <section class="flex items-center h-full p-16">
+    <div class="container flex flex-col items-center justify-center px-5 mx-auto my-8">
+      <div class="text-center">
+        <h2 class="mb-8 font-bold text-9xl">
+          <span class="text-primary">Inscripciones</span>
+        </h2>
+        <p class="text-3xl font-semibold md:text-3xl">Elige un plan para inscribirte</p>
+        <p class="mt-4 mb-8 text-lg text-muted dark:text-slate-400">
+          Cupo limitado de 20 estudiantes por plan.
+        </p>
+        <div class="mb-8">
+          <a rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSfa31THrIoEzrVoCFtKEdSqSnYWDQYJ2pOwXltpqWY5Khs44w/viewform?usp=pp_url&entry.740225610=Opci%C3%B3n+1" class="btn ml-4">Plan Sábados de 8:00 A.M. a 10:00 A.M.</a>
+          <a rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSd8uu42iOeTT7eiFa0fjQDSwXRveBXDjGXt0H2QYScvB8whMQ/viewform?usp=pp_url&entry.391430183=Opci%C3%B3n+1" class="btn ml-4">Plan Miércoles de 4:00 P.M: a 6:00 P.M.</a>
+        </div>
+        <a rel="noopener noreferrer" href={getHomePermalink()} class="btn ml-4">Regresar a la página principal</a>
+      </div>
+    </div>
+  </section>
+</Layout>

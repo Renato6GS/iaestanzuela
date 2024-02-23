@@ -1,6 +1,6 @@
 site:
-  name: Estanzuela IA
-  site: 'https://astrowind.vercel.app'
+  name: IA Estanzuela
+  site: 'https://iaestanzuela.com'
   base: '/'
   trailingSlash: false
 
@@ -9,14 +9,14 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: IAEstanzuela
+    template: '%s — IAEstanzuela'
+  description: "Aprende Inteligencia Artificial en Estanzuela Zacapa gratis"
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: IAEstanzuela
     images:
       - url: '~/assets/images/default.png'
         width: 1200
