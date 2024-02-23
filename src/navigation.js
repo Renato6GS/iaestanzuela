@@ -26,7 +26,7 @@ export const footerData = {
   ],
   secondaryLinks: [],
   footNote: `<div class='flex flex-row gap-4'>
-    <a title='Facebook de Ingeniería en Sistemas de Zacapa' href='https://www.facebook.com/ingsistemasumgzacapa' target='_blank'><img class='w-24 aspect-square' src='./src/assets/images/umg-logo.webp' alt='Logo de la Universidad Mariano Gálvez' /></a>
-    <img class='w-24 aspect-square' src='./src/assets/images/estanzuela-logo.webp' alt='Logo de la Municipalidad de Estanzuela 2024 - 2028' title='Logo de la Municipalidad de Estanzuela 2024 - 2028' />
+    <a title='Facebook de Ingeniería en Sistemas de Zacapa' href='https://www.facebook.com/ingsistemasumgzacapa' target='_blank'><img class='w-24 aspect-square' src='https://www.iaestanzuela.com/images/umg-logo.webp' alt='Logo de la Universidad Mariano Gálvez' /></a>
+    <img class='w-24 aspect-square' src='https://www.iaestanzuela.com/images/estanzuela-logo.webp' alt='Logo de la Municipalidad de Estanzuela 2024 - 2028' title='Logo de la Municipalidad de Estanzuela 2024 - 2028' />
     </div>`,
 };
