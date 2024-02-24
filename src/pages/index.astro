@@ -190,7 +190,7 @@ const metadata = {
 
   <!-- Steps Widget ****************** -->
 
-  <section class="mt-12">
+  <section id='temario' class="mt-12 pt-24">
     <Headline title={'Temario'} subtitle={'Guía didáctica'} classes="mb-2 md:mb-4" />
 
     <Steps
@@ -349,18 +349,19 @@ const metadata = {
   <!-- Features2 Widget ************** -->
 
   <Features2
+    id="requisitos"
     title="Requisitos de inscripción"
     tagline="Inscripción"
     items={[
       {
         title: 'Copia de boleta de ornato',
-        description: "Presentar copia de boleta de ornato a la municipalidad de Estanzuela <a class='text-accent hover:text-primary' href='https://maps.app.goo.gl/FoHeUmqDTXvdJwwg6' target='_blank' rel='noopener' title='Ver ubicación de la municipalidad de Estanzuela'>(ver ubicación)</a>. Si es menor de edad, presentar copia de boleta de ornato de un familiar.",
+        description: "Adjuntar copia de boleta de ornato al momento de llenar el formulario de inscripción. Si es menor de edad, presentar copia de boleta de ornato de un familiar o responsable del estudiante.",
         icon: 'flat-color-icons:template',
       },
       {
         title: 'Copia de partida de nacimiento',
         description:
-          "Presentar copia de partida de nacimiento del estudiante en la municipalidad de Estanzuela <a class='text-accent hover:text-primary' href='https://maps.app.goo.gl/FoHeUmqDTXvdJwwg6' target='_blank' rel='noopener' title='Ver ubicación de la municipalidad de Estanzuela'>(ver ubicación)</a>.",
+          "Adjuntar copia de partida de nacimiento del estudiante al momento de llenar el formulario de inscripción.",
         icon: 'flat-color-icons:document',
       },
     ]}
@@ -373,6 +374,7 @@ const metadata = {
   <!-- FAQs Widget ******************* -->
 
   <FAQs
+    id="preguntas"
     title="Preguntas Frecuentes"
     tagline="FAQs"
     classes={{ container: 'max-w-6xl' }}
@@ -385,7 +387,7 @@ const metadata = {
       {
         title: '¿El curso incluye algún tipo de reconocimiento?',
         description:
-          "Sí. Por parte de la Universidad Mariano Gálvez de Guatemala, se impartiran <span class='text-accent'>diplomas de reconocimiento</span> para aquellos estudiantes que lleguen al final del curso.",
+          "Sí. Por parte de la Universidad Mariano Gálvez de Guatemala, se impartirán <span class='text-accent'>diplomas de reconocimiento</span> para aquellos estudiantes que lleguen al final del curso.",
       },
       {
         title: '¿Cuáles son los horarios de clases?',

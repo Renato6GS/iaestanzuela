@@ -1,5 +1,17 @@
 export const headerData = {
   links: [
+    {
+      text: "Temas", href: "#que-aprenderas",
+    },
+    {
+      text: "Temario", href: "#temario",
+    },
+    {
+      text: "Requisitos", href: "#requisitos",
+    },
+    {
+      text: "Preguntas", href: "#preguntas",
+    }
   ],
   actions: [{ text: 'Descargar guía', href: '/docs/guia_didacctica_inteligencia_artificial.pdf', target: "_blank" }],
 };
