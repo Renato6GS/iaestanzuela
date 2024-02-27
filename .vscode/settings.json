@@ -17,5 +17,5 @@
   "yaml.schemas": {
     "./.vscode/astrowind/config-schema.json": "/src/config.yaml"
   },
-  "workbench.colorTheme": "Bio Dark"
+  "workbench.colorTheme": "One Dark Pro Darker"
 }
