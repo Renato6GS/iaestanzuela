@@ -1,0 +1,120 @@
+---
+import Link from '~/components/landing/Link.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import ContentClass from '~/components/landing/ContentClass.astro';
+import NavClass from '~/components/landing/NavClass.astro';
+
+const metadata = {
+  title: 'Clase 3 - Módulo 1 - IA Estanzuela',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <section class="grid max-w-[1024px] px-6 sm:px-4 py-4 m-auto grid-cols-1 md:grid-cols-[1fr_3fr] gap-4">
+    <NavClass open={0} />
+
+    <section>
+      <header>
+        <p class="text-xl mb-1 text-secondary dark:text-blue-200 font-bold tracking-wide">Clase 3</p>
+        <h1
+          class="text-2xl md:text-3xl font-bold leading-tighter tracking-tighter font-heading dark:text-gray-200 mb-8"
+        >
+          Ética en el uso de la Inteligencia Artificial.
+        </h1>
+        <div class="flex flex-col md:flex-row gap-2">
+          <a
+            href="https://prezi.com/view/PTubW4FO7h9hM1iLkorF/"
+            target="_blank"
+            class="btn-primary w-full md:w-fit sm:mb-0">Ver presentación (Prezi)</a
+          >
+          <a
+            href="https://drive.google.com/file/d/1vwJ0Ev7-cSp2jbKwmnLUypnMOnh22f3p/view?usp=sharing"
+            target="_blank"
+            class="btn-secondary w-full md:w-fit sm:mb-0">Descargar presentación (PDF)</a
+          >
+        </div>
+      </header>
+      <article class="my-8">
+        <h3 class="text-xl text-secondary dark:text-blue-200 font-bold tracking-wide uppercase">
+          Artículos vistos en clase
+        </h3>
+
+        <ContentClass
+          title="Clearview AI entregó 30.000 millones de fotos de Facebook y otras redes a la Policía en EE.UU."
+          href="https://www.lavanguardia.com/tecnologia/20230405/8876104/clearview-ai-entrego-30-000-millones-fotos-facebook-redes-policia.html"
+        >
+          <p slot="description">
+            Clearview AI es una empresa que creó una herramienta de <Link
+              href="https://latam.kaspersky.com/resource-center/definitions/what-is-facial-recognition"
+              target="_blank">reconocimiento facial (leer más)</Link
+            > capaz de identificar a una persona a partir de una imagen, extrayendo datos de miles de millones de fotos públicamente
+            accesibles en redes sociales y otras páginas web. Esta herramienta ha sido utilizada por agencias de policía
+            en varios países, lo que generó una amplia controversia sobre privacidad, consentimiento y vigilancia masiva.
+            Se cuestionó especialmente el impacto en la privacidad individual, dado que las personas cuyas imágenes fueron
+            incluidas en la base de datos no dieron su consentimiento explícito para tal uso.
+          </p>
+          <slot slot="link-name">Leer más</slot>
+        </ContentClass>
+
+        <ContentClass
+          title="Caso práctico: probamos por qué un algoritmo judicial justo es imposible"
+          href="https://www.technologyreview.es/s/13800/caso-practico-probamos-por-que-un-algoritmo-judicial-justo-es-imposible"
+        >
+          <p slot="description">
+            COMPAS (Correctional Offender Management Profiling for Alternative Sanctions) es un software utilizado en el
+            sistema judicial de Estados Unidos para evaluar el riesgo de reincidencia de los delincuentes.
+            Investigaciones han señalado que el algoritmo podría ser parcial contra las minorías, particularmente los
+            afroamericanos, sugiriendo un sesgo racial en las predicciones de reincidencia. Este caso ha sido
+            ampliamente debatido en cuanto a la transparencia y justicia de los algoritmos utilizados en decisiones
+            judiciales críticas.
+          </p>
+          <slot slot="link-name">Leer más</slot>
+        </ContentClass>
+
+        <ContentClass
+          title="Los peligros de la Inteligencia Artificial como arma de guerra"
+          href="https://es.euronews.com/2023/02/17/los-peligros-de-la-inteligencia-artificial-como-arma-de-guerra"
+        >
+          <p slot="description">
+            El uso de drones autónomos y sistemas de armas autónomas en conflictos armados ha generado un intenso debate
+            ético. Estos sistemas pueden identificar, seleccionar y atacar objetivos sin intervención humana directa. <Link
+              href="https://www.youtube.com/watch?v=7d87VFSQKjc"
+              target="_blank">Ver video explicativo.</Link
+            >
+            Las preocupaciones éticas incluyen la delegación de decisiones de vida o muerte a máquinas, la posibilidad de
+            errores catastróficos sin responsabilidad clara, y el potencial para una nueva carrera armamentística de armas
+            autónomas.
+          </p>
+          <slot slot="link-name">Leer más</slot>
+        </ContentClass>
+
+        <ContentClass
+          title="Amazon abandona un proyecto de IA para la contratación por su sesgo sexista"
+          href="https://www.reuters.com/article/idUSKCN1MO0M4/"
+        >
+          <p slot="description">
+            Amazon desarrolló un sistema de IA para optimizar el proceso de contratación evaluando los currículums de
+            los postulantes. Sin embargo, descubrieron que el sistema tenía un sesgo contra las mujeres para puestos de
+            ingeniería y otros roles técnicos, debido a que el modelo se entrenó con currículums recibidos en un período
+            de 10 años, dominados por perfiles masculinos. Este caso destaca los riesgos de sesgo y discriminación en
+            los algoritmos de IA cuando los datos de entrenamiento no son adecuadamente balanceados o reflejan
+            prejuicios existentes.
+          </p>
+          <slot slot="link-name">Leer más</slot>
+        </ContentClass>
+
+        <h3 class="text-xl text-secondary dark:text-blue-200 font-bold tracking-wide uppercase">Enlaces a recursos</h3>
+        <ContentClass title="Clonación de voz (ElevenLabs)" href="https://elevenlabs.io/text-to-speech">
+          <p slot="description">
+            AI Voice Generator de Eleven Labs es una herramienta de síntesis de voz que convierte texto escrito en habla
+            audible, utilizando tecnología avanzada de inteligencia artificial. Esta herramienta es capaz de recrear
+            tonos y matices humanos, lo que permite producir audio que imita fielmente diversas voces humanas. Aunque,
+            para poder lograr clonar la voz, es necesario contar con créditos, los cuales, deben ser adquiridos al pagar
+            una suscripción.
+          </p>
+        </ContentClass>
+      </article>
+    </section>
+  </section>
+</Layout>

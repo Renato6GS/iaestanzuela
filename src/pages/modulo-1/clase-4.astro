@@ -1,0 +1,81 @@
+---
+import Link from '~/components/landing/Link.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import ContentClass from '~/components/landing/ContentClass.astro';
+import NavClass from '~/components/landing/NavClass.astro';
+
+const metadata = {
+  title: 'Clase 4 - Módulo 1 - IA Estanzuela',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <section class="grid max-w-[1024px] px-6 sm:px-4 py-4 m-auto grid-cols-1 md:grid-cols-[1fr_3fr] gap-4">
+    <NavClass open={0} />
+
+    <section>
+      <header>
+        <p class="text-xl mb-1 text-secondary dark:text-blue-200 font-bold tracking-wide">Clase 4</p>
+        <h1
+          class="text-2xl md:text-3xl font-bold leading-tighter tracking-tighter font-heading dark:text-gray-200 mb-8"
+        >
+          Pioneros de la Inteligencia Artificial. ¿Quién está al frente?
+        </h1>
+        <div class="flex flex-col md:flex-row gap-2">
+          <a
+            href="https://prezi.com/view/Wl781lDtELJWydf4clw7/"
+            target="_blank"
+            class="btn-primary w-full md:w-fit sm:mb-0">Ver presentación (Prezi)</a
+          >
+          <a
+            href="https://drive.google.com/file/d/1p9nvYfdw0c-DDssiwwvlzrOJg6hG0YWx/view?usp=sharing"
+            target="_blank"
+            class="btn-secondary w-full md:w-fit sm:mb-0">Descargar presentación (PDF)</a
+          >
+        </div>
+      </header>
+      <article class="my-8">
+        <h3 class="text-xl text-secondary dark:text-blue-200 font-bold tracking-wide uppercase">
+          Artículos vistos en clase
+        </h3>
+
+        <ContentClass
+          title="NVIDIA Blackwell Platform Arrives to Power a New Era of Computing"
+          href="https://nvidianews.nvidia.com/news/nvidia-blackwell-platform-arrives-to-power-a-new-era-of-computing"
+        >
+          <p slot="description">
+            Artículo oficial de NVIDIA anunciando su nueva <Link
+              href="https://aws.amazon.com/es/what-is/gpu/"
+              target="_blank">GPU (leer más)</Link
+            > conocidas como Blackwell 100 o simplemente como B100.
+          </p>
+          <slot slot="link-name">Leer más</slot>
+        </ContentClass>
+
+        <ContentClass
+          title="Meta comprará 350 000 aceleradoras H100 a NVIDIA por más de 10 000 millones de dólares"
+          href="https://www.geektopia.es/es/technology/2024/01/19/noticias/meta-comprara-350-000-aceleradoras-h100-a-nvidia-por-mas-de-10-000-millones-de-dolares.html"
+        >
+          <slot slot="link-name">Leer más</slot>
+        </ContentClass>
+
+        <h3 class="text-xl text-secondary dark:text-blue-200 font-bold tracking-wide uppercase">
+          Videos vistos en clase
+        </h3>
+
+        <ContentClass title="Robot Figure 01 de OpenAI y Figure" href="https://www.youtube.com/watch?v=Sq1QZB5baNw">
+          <slot slot="link-name">Ver video</slot>
+        </ContentClass>
+
+        <ContentClass title="WATCH: Jensen Huang's Nvidia GTC Keynote - LIVE" href="https://www.youtube.com/watch?v=USlE2huSI_w">
+          <p slot="description">
+            Este video no se vio en clase, pero, contiene el anuncio de las nuevas GPU de NVIDIA conocidas como B100 anunciados el 18 de marzo del 2024.
+            (Minuto recomendado: 25:15)
+          </p>
+          <slot slot="link-name">Ver video</slot>
+        </ContentClass>
+      </article>
+    </section>
+  </section>
+</Layout>

@@ -1,0 +1,96 @@
+---
+import Link from '~/components/landing/Link.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import ContentClass from '~/components/landing/ContentClass.astro';
+import NavClass from '~/components/landing/NavClass.astro';
+
+const metadata = {
+  title: 'Clase 1 - Módulo 1 - IA Estanzuela',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <section class="grid max-w-[1024px] px-6 sm:px-4 py-4 m-auto grid-cols-1 md:grid-cols-[1fr_3fr] gap-4">
+    <NavClass open={0} />
+
+    <section>
+      <header>
+        <p
+          class="text-xl mb-1 text-secondary dark:text-blue-200 font-bold tracking-wide"
+        >
+          Clase 1
+        </p>
+        <h1 class="text-2xl md:text-3xl font-bold leading-tighter tracking-tighter font-heading dark:text-gray-200 mb-8">
+          Introducción a las nuevas tecnologías en inteligencia artificial y herramientas de IA en el mercado.
+        </h1>
+        <div class="flex flex-col md:flex-row gap-2">
+          <a
+            href="https://prezi.com/view/5pSEqFZhecl3qZXaDR9f/"
+            target="_blank"
+            class="btn-primary w-full md:w-fit sm:mb-0">Ver presentación (Prezi)</a
+          >
+          <a
+            href="https://drive.google.com/file/d/1lB1kZWdTHere2E59LYNz9vZ9ejy5fYTT/view?usp=sharing"
+            target="_blank"
+            class="btn-secondary w-full md:w-fit sm:mb-0">Descargar presentación (PDF)</a
+          >
+        </div>
+      </header>
+      <article class="my-8">
+        <h3 class="text-xl text-secondary dark:text-blue-200 font-bold tracking-wide uppercase">
+          Recursos vistos en clase
+        </h3>
+
+        <ContentClass
+          title="Generación de imágenes con IA (Stable diffusion)"
+          href="https://colab.research.google.com/github/lllyasviel/Fooocus/blob/main/fooocus_colab.ipynb"
+        >
+          <p slot="description" class="text-muted leading-7">
+            Esta es una herramienta de <Link href="https://aws.amazon.com/es/what-is/open-source/" target="_blank"
+              >código abierto (leer más)</Link
+            > a partir de descripciones textuales. Modelo desarrollado por la empresa <Link
+              href="https://stability.ai/"
+              target="_blank">Stability AI (leer más)</Link
+            > en colaboración con investigadores de la Universidad Ludwig Maximilian de Múnich y Runway.
+          </p>
+        </ContentClass>
+
+        <ContentClass title="Generación de videos con IA (Sora)" href="https://openai.com/sora">
+          <p slot="description" class="text-muted leading-7">
+            Sora es un modelo de inteligencia artificial desarrollado por <Link
+              href="https://openai.com/"
+              target="_blank">OpenAI (leer más)</Link
+            > que transforma descripciones textuales en videos. A través del uso de tecnologías de aprendizaje profundo,
+            Sora puede visualizar narrativas y conceptos expresados en texto, creando videos que reflejan el contenido y
+            el estilo descrito por el usuario. Actualmente, no está disponible a todo el público.
+          </p>
+        </ContentClass>
+
+        <ContentClass title="Conversaciones con IA (ChatGPT)" href="https://chat.openai.com/">
+          <p slot="description" class="text-muted leading-7">
+            ChatGPT es un modelo de inteligencia artificial creado por <Link href="https://openai.com/" target="_blank"
+              >OpenAI (leer más)</Link
+            >, diseñado para entender y generar texto en lenguaje natural. A través de su capacidad para procesar y
+            responder a consultas en lenguaje humano, ChatGPT puede participar en conversaciones, responder preguntas, y
+            ofrecer asistencia textual en una amplia gama de temas. Tiene 2 versiones disponibles para todo el público,
+            siendo estos GPT-3 gratuito y GPT-4 siendo de suscripción mensual, costando $20 mensuales la versión
+            individual y $25 la versión para equipos. <Link href="https://openai.com/chatgpt/pricing" target="_blank"
+              >Ver precios</Link
+            >
+          </p>
+        </ContentClass>
+
+        <h3 class="text-xl text-secondary dark:text-blue-200 font-bold tracking-wide uppercase">Enlaces a videos</h3>
+
+        <ContentClass
+          title="¿Qué es y cómo funciona la Inteligencia Artificial?"
+          href="https://www.youtube.com/watch?v=_tA5cinv0U8"
+        >
+          <p slot='description'>Créditos: <Link href="https://www.youtube.com/@Derivando" target="_blank">Derivando (visitar)</Link></p>
+          <slot slot='link-name'>Ver video</slot>
+        </ContentClass>
+      </article>
+    </section>
+  </section>
+</Layout>

@@ -1,0 +1,99 @@
+---
+import Link from '~/components/landing/Link.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import ContentClass from '~/components/landing/ContentClass.astro';
+import NavClass from '~/components/landing/NavClass.astro';
+
+const metadata = {
+  title: 'Clase 6 y 7 - Módulo 1 - IA Estanzuela',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <section class="grid max-w-[1024px] px-6 sm:px-4 py-4 m-auto grid-cols-1 md:grid-cols-[1fr_3fr] gap-4">
+    <NavClass open={0} />
+
+    <section>
+      <header>
+        <p class="text-xl mb-1 text-secondary dark:text-blue-200 font-bold tracking-wide">Clase 6 - 7</p>
+        <h1
+          class="text-2xl md:text-3xl font-bold leading-tighter tracking-tighter font-heading dark:text-gray-200 mb-8"
+        >
+          Sistemas expertos - Robótica
+        </h1>
+        <div class="flex flex-col md:flex-row gap-2">
+          <a
+            href="https://prezi.com/view/IBLCCqvfStX3HY2edeVn/"
+            target="_blank"
+            class="btn-primary w-full md:w-fit sm:mb-0">Ver presentación (Prezi)</a
+          >
+          <a
+            href="https://drive.google.com/file/d/1yM7YpZOsNDWYHMQUVowJNFaaXxhAa4ej/view?usp=sharing"
+            target="_blank"
+            class="btn-secondary w-full md:w-fit sm:mb-0">Descargar presentación (PDF)</a
+          >
+        </div>
+      </header>
+      <article class="my-8">
+        <h3 class="text-xl text-secondary dark:text-blue-200 font-bold tracking-wide uppercase">
+          Recursos vistos en clase
+        </h3>
+
+        <ContentClass title="El ChatGPT de Meta (Llama 3)" href="https://www.meta.ai/">
+          <p slot="description">
+            Meta anunció la nueva versión de <Link
+              href="https://testdevelocidaddeinternet.es/inteligencia-artificial/meta-lanza-llama-3-y-afirma-que-se-encuentra-entre-los-mejores-modelos-abiertos-disponibles/"
+              target="_blank">Llama 3 (leer más)</Link
+            > el cual, su versión más avanzada fue entrenado con más de 400 mil millones de parámetros. A la vez, anunciaron
+            su nuevo producto, su ChatGPT.
+          </p>
+        </ContentClass>
+
+        <h3 class="text-xl text-secondary dark:text-blue-200 font-bold tracking-wide uppercase">
+          Videos vistos en clase
+        </h3>
+
+        <ContentClass
+          title="Nuestro proyecto MAS GRANDE! (ROBOT ARAÑA)"
+          href="https://www.youtube.com/watch?v=xd8dKY6Ozrg"
+        >
+          <p slot="description">
+            En este video se muestra un robot araña controlado por un humano, y no bajo control total de la IA. (Minuto
+            recomendado: 23:15)
+          </p>
+          <slot slot="link-name">Ver video</slot>
+        </ContentClass>
+
+        <ContentClass title="Adiós a HD Atlas" href="https://www.youtube.com/watch?v=-9EM5_VFlt8">
+          <p slot="description">
+            Aquí se muestra el robot Atlas de Boston Dynamics controlado por IA, mostrando como ha ido mejorando pasando
+            los años hasta su retiro por un nuevo modelo.
+          </p>
+          <slot slot="link-name">Ver video</slot>
+        </ContentClass>
+
+        <ContentClass title="Todo un nuevo Atlas | Boston Dynamics" href="https://www.youtube.com/watch?v=29ECwExc-_M">
+          <p slot="description">
+            Ahora, Boston Dynamics anuncian su nuevo robot, el cual, ya cuenta con articulaciones más avanzados dejando
+            de lado sus partes hidráulicas.
+          </p>
+          <slot slot="link-name">Ver video</slot>
+        </ContentClass>
+
+        <h3 class="text-xl text-secondary dark:text-blue-200 font-bold tracking-wide uppercase">Videos recomendados</h3>
+
+        <ContentClass
+          title="Lo que OpenAI NO quería que supieras sobre GPT4 - (De los MoEs a Mixtral)"
+          href="https://www.youtube.com/watch?v=Sfnu5OmAITA"
+        >
+          <p slot="description">
+            Aquí verán una explicación más extendida sobre los Mixture of experts (Mezcla de expertos) y cómo es que con
+            ello ChatGPT logra ser tan poderoso.
+          </p>
+          <slot slot="link-name">Ver video</slot>
+        </ContentClass>
+      </article>
+    </section>
+  </section>
+</Layout>

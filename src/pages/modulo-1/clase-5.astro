@@ -1,0 +1,73 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import ContentClass from '~/components/landing/ContentClass.astro';
+import NavClass from '~/components/landing/NavClass.astro';
+
+const metadata = {
+  title: 'Clase 5 - Módulo 1 - IA Estanzuela',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <section class="grid max-w-[1024px] px-6 sm:px-4 py-4 m-auto grid-cols-1 md:grid-cols-[1fr_3fr] gap-4">
+    <NavClass open={0} />
+
+    <section>
+      <header>
+        <p class="text-xl mb-1 text-secondary dark:text-blue-200 font-bold tracking-wide">Clase 5</p>
+        <h1
+          class="text-2xl md:text-3xl font-bold leading-tighter tracking-tighter font-heading dark:text-gray-200 mb-8"
+        >
+          Visión Artificial.
+        </h1>
+        <div class="flex flex-col md:flex-row gap-2">
+          <a
+            href="https://prezi.com/view/E1tSMAFq72XJZuFiP8wf/"
+            target="_blank"
+            class="btn-primary w-full md:w-fit sm:mb-0">Ver presentación (Prezi)</a
+          >
+          <a
+            href="https://drive.google.com/file/d/1DlmpFOS_GuSjvKUFsozLwadbXpfSNX3s/view?usp=sharing"
+            target="_blank"
+            class="btn-secondary w-full md:w-fit sm:mb-0">Descargar presentación (PDF)</a
+          >
+        </div>
+      </header>
+      <article class="my-8">
+        <h3 class="text-xl text-secondary dark:text-blue-200 font-bold tracking-wide uppercase">
+          Artículos recomendados
+        </h3>
+
+        <ContentClass title="¿Qué es el OCR?" href="https://aws.amazon.com/es/what-is/ocr/">
+          <p slot="description">
+            De manera simplificada, el OCR (o reconocimiento óptico de caracteres en español) se trata del proceso de
+            convertir una imagen de texto en un formato de texto editable. Por ejemplo, tomar una foto con el teléfono a
+            un artículo del periódico y a través del OCR, convertir esa imagen en un documento Word para editarlo.
+          </p>
+          <slot slot="link-name">Leer más</slot>
+        </ContentClass>
+
+        <ContentClass title="Paper oficial de V-Estrella" href="https://vstar-seal.github.io/">
+          <p slot="description">
+            Dentro de este artículo explican el algoritmo propuesto por los científicos de V-Estrella y cómo este
+            funciona para hacer más efectivo la visión artificial.
+          </p>
+          <slot slot="link-name">Leer más</slot>
+        </ContentClass>
+
+        <h3 class="text-xl text-secondary dark:text-blue-200 font-bold tracking-wide uppercase">Videos recomendados</h3>
+
+        <ContentClass
+          title="Explicación de V-Estrella y su algoritmo"
+          href="https://www.youtube.com/watch?v=4goxXl2Lk_M"
+        >
+          <p slot="description">
+            En este video se muestra más a profundidad y dinámico la explicación de V-Estrella vista en clase.
+          </p>
+          <slot slot="link-name">Ver video</slot>
+        </ContentClass>
+      </article>
+    </section>
+  </section>
+</Layout>
