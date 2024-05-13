@@ -1,0 +1,63 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import ContentClass from '~/components/landing/ContentClass.astro';
+import NavClass from '~/components/landing/NavClass.astro';
+
+const metadata = {
+  title: 'Clase 8 - Módulo 2 - IA Estanzuela',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <section class="grid max-w-[1024px] px-6 sm:px-4 py-4 m-auto grid-cols-1 md:grid-cols-[1fr_3fr] gap-4">
+    <NavClass open={1} />
+
+    <section>
+      <header>
+        <p class="text-xl mb-1 text-secondary dark:text-blue-200 font-bold tracking-wide">Clase 8</p>
+        <h1
+          class="text-2xl md:text-3xl font-bold leading-tighter tracking-tighter font-heading dark:text-gray-200 mb-8"
+        >
+          Introducción a lenguajes de programación, presentación de Python y su implementación en redes neuronales.
+        </h1>
+        <div class="flex flex-col md:flex-row gap-2">
+          <a
+            href="https://prezi.com/view/72qc8ILAfh5BJgt8qLc4/"
+            target="_blank"
+            class="btn-primary w-full md:w-fit sm:mb-0">Ver presentación (Prezi)</a
+          >
+          <a
+            href="https://drive.google.com/file/d/1r9KSlionv6qMv2EXaxNQuSpIkucltHqq/view?usp=sharing"
+            target="_blank"
+            class="btn-secondary w-full md:w-fit sm:mb-0">Descargar presentación (PDF)</a
+          >
+        </div>
+      </header>
+      <article class="my-8">
+        <h3 class="text-xl text-secondary dark:text-blue-200 font-bold tracking-wide uppercase">
+          Artículos recomendados
+        </h3>
+
+        <ContentClass title="Aprende Python" href="https://aprendepython.es/">
+          <p slot="description">
+            Si quieren adentrarse más en el mundo de la programación con Python y conocer más sobre sus funcionalidades, les recomiendo este libro web gratuito donde podrá aprender más sobre el lenguaje.
+          </p>
+          <slot slot="link-name">Leer más</slot>
+        </ContentClass>
+
+        <h3 class="text-xl text-secondary dark:text-blue-200 font-bold tracking-wide uppercase">Videos recomendados</h3>
+
+        <ContentClass
+          title="PYTHON Desde Cero: Primeros Pasos en una hora"
+          href="https://www.youtube.com/watch?v=WatTqrq8kQQ&pp=ygUPbW91cmVkZXYgcHl0aG9u"
+        >
+          <p slot="description">
+            O si en cambio, prefieren ver un video, les recomiendo este del canal de 'Mouredev', en donde en un video de 1 hora da los primeros pasos con el lenguaje de programación Python.
+          </p>
+          <slot slot="link-name">Ver video</slot>
+        </ContentClass>
+      </article>
+    </section>
+  </section>
+</Layout>
