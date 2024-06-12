@@ -1,0 +1,39 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import ContentClass from '~/components/landing/ContentClass.astro';
+import NavClass from '~/components/landing/NavClass.astro';
+
+const metadata = {
+  title: 'Clase 12 - Módulo 2 - IA Estanzuela',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <section class="grid max-w-[1024px] px-6 sm:px-4 py-4 m-auto grid-cols-1 md:grid-cols-[1fr_3fr] gap-4">
+    <NavClass open={1} />
+
+    <section>
+      <header>
+        <p class="text-xl mb-1 text-secondary dark:text-blue-200 font-bold tracking-wide">Clase 12</p>
+        <h1
+          class="text-2xl md:text-3xl font-bold leading-tighter tracking-tighter font-heading dark:text-gray-200 mb-8"
+        >
+          Construyendo primeros modelos con Python con TensorFlow parte 1.
+        </h1>
+        <div class="flex flex-col md:flex-row gap-2">
+          <a
+            href="https://drive.google.com/file/d/1bSI9Xl2_DnkTukMfIr0o9gltnSu7VS9X/view?usp=sharing"
+            target="_blank"
+            class="btn-primary w-full md:w-fit sm:mb-0">Ver presentación (PDF)</a
+          >
+          <a
+            href="https://docs.google.com/presentation/d/18Z64a2NLOKAlh1RCIWItAvCLCEfj1jGj/edit?usp=sharing&ouid=107399351136955974594&rtpof=true&sd=true"
+            target="_blank"
+            class="btn-primary w-full md:w-fit sm:mb-0">Ver presentación (PPT)</a
+          >
+        </div>
+      </header>
+    </section>
+  </section>
+</Layout>
