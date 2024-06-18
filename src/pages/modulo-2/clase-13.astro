@@ -1,0 +1,85 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import ContentClass from '~/components/landing/ContentClass.astro';
+import NavClass from '~/components/landing/NavClass.astro';
+import Link from '~/components/landing/Link.astro';
+
+const metadata = {
+  title: 'Clase 13 - Módulo 2 - IA Estanzuela',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <section class="grid max-w-[1024px] px-6 sm:px-4 py-4 m-auto grid-cols-1 md:grid-cols-[1fr_3fr] gap-4">
+    <NavClass open={1} />
+
+    <section>
+      <header>
+        <p class="text-xl mb-1 text-secondary dark:text-blue-200 font-bold tracking-wide">Clase 13</p>
+        <h1
+          class="text-2xl md:text-3xl font-bold leading-tighter tracking-tighter font-heading dark:text-gray-200 mb-8"
+        >
+        Construyendo primeros modelos con Python con TensorFlow parte 2.
+        </h1>
+        <div class="flex flex-col md:flex-row gap-2">
+          <a
+            href="https://drive.google.com/file/d/1bSI9Xl2_DnkTukMfIr0o9gltnSu7VS9X/view?usp=sharing"
+            target="_blank"
+            class="btn-primary w-full md:w-fit sm:mb-0">Ver presentación (PDF)</a
+          >
+          <a
+            href="https://docs.google.com/presentation/d/18Z64a2NLOKAlh1RCIWItAvCLCEfj1jGj/edit?usp=sharing&ouid=107399351136955974594&rtpof=true&sd=true"
+            target="_blank"
+            class="btn-primary w-full md:w-fit sm:mb-0">Ver presentación (PPT)</a
+          >
+        </div>
+      </header>
+      <article class="my-8">
+        <h3 class="text-xl text-secondary dark:text-blue-200 font-bold tracking-wide uppercase">Herramientas recomendadas</h3>
+
+        <ContentClass
+          title="Luma IA"
+          href="https://lumalabs.ai/dream-machine"
+        >
+          <p slot="description">
+            En clase se mostró la herramienta de Luma IA para la generación de videos a partir de texto, pero también permite animar imagenes. Les animo a crear una cuenta y probarlo por ustedes mismos ya que se encuentra gratis de por momento.
+          </p>
+          <slot slot="link-name">Ver herramienta</slot>
+        </ContentClass>
+
+        <ContentClass
+          title="Gen 3 de Runway"
+          href="https://runwayml.com/blog/introducing-gen-3-alpha/"
+        >
+          <p slot="description">
+            Por otro lado, esta semana también salió al mercado la herramienta Gen 3 de Runway el cual, también permite generar videos a partir de texto, pero de forma un poco más avanzada ofrenciendo más opciones. Igualmente, tiene una capa gratuita que permite utilizarlo.
+          </p>
+          <slot slot="link-name">Ver herramienta</slot>
+        </ContentClass>
+
+        <ContentClass
+          title="ChatGPT gratuito"
+          href="https://www.javascript100.dev/04-chatgpt-local"
+        >
+          <p slot="description">
+            En clase, también se mostró un ChatGPT que funciona sin internet (realmente, solo se necesita la primera vez para descargar el modelo) y que utiliza los recursos de nuestras computadoras. Como les he dicho en clase, ChatGPT se ejecuta en los servidores de Microsoft, Gemini en los servidores de Google, Claude en los servidores de Anthropic, etc. Pero, en este caso, el servidor seremos nosotros mismos. NO LES RECOMIENDO dar click al siguiente enlace si su computadora o teléfono es lenta puesto que los modelos de IA requieren de grandes recursos de hardware.
+          </p>
+          <slot slot="link-name">Ver herramienta</slot>
+        </ContentClass>
+
+        <ContentClass
+          title="ChatGPT gratuito explicación"
+          href="https://youtu.be/HvoiF1MCPGs?si=EwyQhGX4xLDzVvD6"
+        >
+          <p slot="description">
+            Si les da curiosidad como se logró crear un ChatGPT gratuito, ya que esto no se vio en clase, les comparto este video explicativo de la herramienta donde se explican muchas más cosas de la IA y el desarrollo Web.
+          </p>
+          <p slot='description'>Créditos: <Link href="https://www.youtube.com/@midulive" target="_blank">Midulive (visitar)</Link></p>
+          <slot slot="link-name">Ver video</slot>
+        </ContentClass>
+
+      </article>
+    </section>
+  </section>
+</Layout>
