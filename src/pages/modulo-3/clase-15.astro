@@ -1,0 +1,69 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import ContentClass from '~/components/landing/ContentClass.astro';
+import NavClass from '~/components/landing/NavClass.astro';
+
+const metadata = {
+  title: 'Clase 15 - Módulo 3 - IA Estanzuela',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <section class="grid max-w-[1024px] px-6 sm:px-4 py-4 m-auto grid-cols-1 md:grid-cols-[1fr_3fr] gap-4">
+    <NavClass open={2} />
+
+    <section>
+      <header>
+        <p class="text-xl mb-1 text-secondary dark:text-blue-200 font-bold tracking-wide">Clase 15</p>
+        <h1
+          class="text-2xl md:text-3xl font-bold leading-tighter tracking-tighter font-heading dark:text-gray-200 mb-8"
+        >
+          Introducción al proyecto final de curso
+        </h1>
+        <div class="flex flex-col md:flex-row gap-2">
+          <a
+            href="https://drive.google.com/file/d/1IpipCuxS0O4Q8wGnKDKrKdKtGigI1wUk/view?usp=sharing"
+            target="_blank"
+            class="btn-secondary w-full md:w-fit sm:mb-0">Descargar presentación (PDF)</a
+          >
+        </div>
+      </header>
+      <article class="my-8">
+        <h3 class="text-xl text-secondary dark:text-blue-200 font-bold tracking-wide uppercase">Videos recomendados</h3>
+
+        <ContentClass
+          title="DIFERENCIAS entre HTML, CSS Y JAVASCRIPT🌎📑 | PDC"
+          href="https://www.youtube.com/watch?v=9Q2JDISDUe8&ab_channel=PanitasDevelopers"
+        >
+          <p slot="description">
+            Explicación en 3 minutos sobre qué es HTML, CSS Y JavaScript
+          </p>
+          <slot slot="link-name">Ver video</slot>
+        </ContentClass>
+
+        <ContentClass
+          title="¿QUE ES UNA API Y PARA QUE SE USA?"
+          href="https://www.youtube.com/watch?v=RXvVvXeBqjw&ab_channel=SoyDalto"
+        >
+          <p slot="description">
+            Explicación en 3 minutos sobre qué es una API y para qué se usa
+          </p>
+          <slot slot="link-name">Ver video</slot>
+        </ContentClass>
+
+        <h3 class="text-xl text-secondary dark:text-blue-200 font-bold tracking-wide uppercase">Enlaces recomendados</h3>
+
+        <ContentClass
+          title="Ejemplo de HTML, CSS y JS"
+          href="https://codi.link/PGZvcm0+DQogIDxkaXY+DQogICAgPGxhYmVsPk5vLiBkZSBDYXJuw6k8L2xhYmVsPg0KICAgIDxpbnB1dCB0eXBlPSJudW1iZXIiIG5hbWU9ImNhcm5ldCIgaWQ9ImNhcm5ldCI+DQogIDwvZGl2Pg0KDQogIDxkaXY+DQogICAgPGxhYmVsIGZvcj0ibm9tYnJlIj5Ob21icmU8L2xhYmVsPg0KICAgIDxpbnB1dCB0eXBlPSJ0ZXh0IiBuYW1lPSJub21icmUiIGlkPSJub21icmUiPg0KICA8L2Rpdj4NCg0KICA8YnV0dG9uPg0KICAgIFJlZ2lzdHJhcg0KICA8L2J1dHRvbj4NCjwvZm9ybT4=%7CZm9ybSB7DQogIGRpc3BsYXk6IGZsZXg7DQogIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47DQogIGdhcDogMTBweDsNCn0NCg0KZGl2IHsNCiAgZGlzcGxheTogZmxleDsNCiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjsNCn0NCg0KaW5wdXQgew0KICBwYWRkaW5nOiAxMHB4IDEycHg7DQogIGZvbnQtc2l6ZTogMTZweA0KfQ0KDQpidXR0b24gew0KICBiYWNrZ3JvdW5kLWNvbG9yOiAjMDlmOw0KICBwYWRkaW5nOiAxMHB4IDEycHg7DQogIGNvbG9yOiB3aGl0ZTsNCiAgZm9udC1zaXplOiAxNnB4Ow0KICBib3JkZXI6IG5vbmU7DQogIGJvcmRlci1yYWRpdXM6IDZweDsNCiAgdGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTsNCiAgY3Vyc29yOiBwb2ludGVyOw0KfQ==%7CY29uc3QgZm9ybSA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoImZvcm0iKTsNCg0KZm9ybS5hZGRFdmVudExpc3RlbmVyKCJzdWJtaXQiLCAoZSkgPT4gew0KICBlLnByZXZlbnREZWZhdWx0KCk7DQoNCiAgYWxlcnQoIkhhcyBzaWRvIHJlZ2lzdHJhZG8iKQ0KICBmb3JtLnJlc2V0KCk7DQp9KQ=="
+        >
+          <p slot="description">
+            Visiten este enlace para que puedan ver un ejemplo de HTML, CSS y JS de manera sencilla
+          </p>
+          <slot slot="link-name">Ver ejemplo</slot>
+        </ContentClass>
+      </article>
+    </section>
+  </section>
+</Layout>
